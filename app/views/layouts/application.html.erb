@@ -23,46 +23,30 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
-              <li class="nav-item">
-                <%= link_to users_path(:id) do %>
-                <a class="fas fa-home"></a>Home
-                <%end%>
+              <li>
+                <a class="fas fa-home nav-link text-light" href="/"> Home</a>
               </li>
-              <li class="nav-item">
-                <%= link_to index_user_path do %>
-                <a class="fas fa-users"></a>Users
-                <%end%>
+              <li>
+                <a class="fas fa-users nav-link text-light" href="/"> User</a>
               </li>
-              <li class="nav-item">
-                <%= link_to index_book_path do %>
-                <a class="fas fa-book-open"></a>Books
-                <%end%>
+              <li>
+                <a class="fas fa-book-open nav-link text-light" href="/"> Books</a>
               </li>
-              <li class="nav-item">
-                <%= link_to destroy_user_session_path, method: :delete do %>
-                <a class="fas fa-sign-out-alt"></a>Log out
-                <%end%>
+              <li>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
               </li>
               <% else %>
-                <li class="nav-item">
-                  <%= link_to root_path do %>
-                  <a class="fas fa-home"></a>Home
-                <%end%>
+                <li>
+                  <a class="fas fa-home nav-link text-light" href="/"> Home</a>
                 </li>
-                <li class="nav-item">
-                  <%= link_to root_path do %>
-                  <a class="fas fa-link"></a>About
-                <%end%>
+                <li>
+                  <a class="fas fa-link nav-link text-light" href="home/about"> About</a>
                 </li>
-                <li class="nav-item">
-                  <%= link_to new_user_session_path do %>
-                  <a class="fas fa-user-plus"></a>Sign up
-                <%end%>
+                <li>
+                  <a class="fas fa-user-plus nav-link text-light" href="/users/sign_up"> Sign up</a>
               </li>
-              <li class="nav-item">
-                  <%= link_to user_session_path do %>
-                  <a class="fas fa-sign-in-alt"></a>Log in
-                <%end%>
+              <li>
+                 <a class="fas fa-sign-in-alt nav-link text-light" href="home/about"> Log in</a>
               </li>
               <% end %>
             </ul>
@@ -71,7 +55,8 @@
       </nav>
     </header>
 
-    <main class="mb-auto">
+    <main>
+      <p id="notice"></p>
       <%= yield %>
     </main>
 
