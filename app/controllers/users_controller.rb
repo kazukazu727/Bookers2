@@ -6,7 +6,10 @@ class UsersController < ApplicationController
 
   end
 
-
+  def index
+    @user=User.where(id: params[:id])
+    @users=User.all
+  end
 
 
   private
