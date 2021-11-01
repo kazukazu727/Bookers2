@@ -1,14 +1,17 @@
 class UsersController < ApplicationController
 
   def show
-    @user=User.where(id: params[:id])
+    @user=User.find(params[:id])
     @book=Book.new
 
   end
 
+
+
   def index
-    @user=User.where(id: params[:id])
+    @user=current_user
     @users=User.all
+    @book=Book.new
   end
 
 
