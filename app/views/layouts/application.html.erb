@@ -50,7 +50,9 @@
                   <a class="fas fa-user-plus nav-link text-light" href="/users/sign_up"> Sign up</a>
               </li>
               <li>
-                 <a class="fas fa-sign-in-alt nav-link text-light" href="users/sign_in"> Log in</a>
+                <%=link_to "/users/sign_in", class: "fas fa-sign-in-alt nav-link text-light" do%>
+                  Log in
+                <%end%>
               </li>
               <% end %>
             </ul>
