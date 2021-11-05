@@ -29,7 +29,7 @@
                 <%end%>
               </li>
               <li>
-                <a class="fas fa-users nav-link text-light" href="/users"> User</a>
+                <a class="fas fa-users nav-link text-light" href="/users"> Users</a>
               </li>
               <li>
                 <a class="fas fa-book-open nav-link text-light" href="/books"> Books</a>
@@ -44,15 +44,13 @@
                   <a class="fas fa-home nav-link text-light" href="/"> Home</a>
                 </li>
                 <li>
-                  <a class="fas fa-link nav-link text-light" href="home/about"> About</a>
+                  <a class="fas fa-link nav-link text-light" href="/home/about"> About</a>
                 </li>
                 <li>
                   <a class="fas fa-user-plus nav-link text-light" href="/users/sign_up"> Sign up</a>
               </li>
               <li>
-                <%=link_to "/users/sign_in", class: "fas fa-sign-in-alt nav-link text-light" do%>
-                  Log in
-                <%end%>
+                <a class="fas fa-sign-in-alt nav-link text-light" href="/users/sign_in"> Log in</a>
               </li>
               <% end %>
             </ul>
